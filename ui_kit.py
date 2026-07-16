@@ -32,10 +32,11 @@ CHART_COLORWAY = [BRAND, SLOW, AMBER, FAST, "#5B7FA6", "#8E5B6E"]
 
 
 def inject_css():
-    st.markdown(
+    # Menggunakan st.html untuk menyuntikkan style secara murni
+    st.html(
         f"""
         <link rel="preconnect" href="https://fonts.googleapis.com">
-        <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;600;700&family=IBM+Plex+Sans:wght@400;500;600&family=IBM+Plex+Mono:wght@500;600&display=swap" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght=500;600;700&family=IBM+Plex+Sans:wght=400;500;600&family=IBM+Plex+Mono:wght=500;600&display=swap" rel="stylesheet">
         <style>
         html, body, [class*="css"] {{
             font-family: {FONT_BODY};
@@ -228,8 +229,7 @@ def inject_css():
             white-space: nowrap;
         }}
         </style>
-        """,
-        unsafe_allow_html=True,
+        """
     )
 
 
