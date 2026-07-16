@@ -295,11 +295,10 @@ def process_rail(stage_meta, hop_hours, sla_ok_max=12, sla_warn_max=20):
                 <div class="rail-hop-time" style="color:{color};">{hop_h:.1f} j</div>
             </div>
             """
-    st.markdown(
+    st.html(
         f"""
         <div class="rail-wrap">
             <div class="rail-track">{nodes_html}</div>
         </div>
-        """,
-        unsafe_allow_html=True,
+        """
     )
